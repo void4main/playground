@@ -6,7 +6,7 @@ use kuva::render::layout::Layout;
 use kuva::render::plots::Plot;
 
 
-fn main() -> ! {
+fn main() {
     println!("Hello, world!");
 
 
@@ -17,6 +17,10 @@ fn main() -> ! {
         .with_link("Process A", "Output Y", 10.0)
         .with_link("Process B", "Output X", 10.0)
         .with_link("Process B", "Output Y", 20.0);
+
+    unsafe {
+        asm!("nop");
+    }
 
     let plots = vec![Plot::Sankey(sankey)];
     let layout = Layout::auto_from_plots(&plots)
