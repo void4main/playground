@@ -11,3 +11,4 @@ A sandbox for testing the most terrifying things
   - Is this a Rust Rover thing?
   - [ ] TODO: Read Rust Rover documentation
 - Create a pull request (based on changes to code)
+- Add nop as asm!()
